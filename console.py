@@ -1,10 +1,10 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 import cmd
 
 
 class HBNBCommand(cmd.Cmd):
-    prompt = '(hbnb) '
+    prompt = "(hbnb) "
 
     def do_quit(self, arg):
         """Quit command to exit the program"""

@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Creates class Place"""
 
-from models.base_model import BaseMode
+from models.base_model import BaseModel
 
 
 class Place(BaseModel):

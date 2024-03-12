@@ -5,7 +5,7 @@ The BaseModel that defines the attributes to use.
 
 from datetime import datetime
 import uuid
-from models
+import models
 
 
 class BaseModel:
@@ -27,8 +27,8 @@ class BaseModel:
                     self.__dict__[key] = datetime.strptime(value, thedate)
                 else:
                     self.__dict__[key] = value
-                else:
-                    models.storage.new(self)
+        else:
+            models.storage.new(self)
 
     def save(self):
         """Updates the updated_at attribute with current time."""

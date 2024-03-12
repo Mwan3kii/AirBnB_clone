@@ -9,6 +9,8 @@ from models.place import Place
 from models.amenity import Amenity
 from models.review import Review
 from models.user import User
+import re
+from shlex import split
 
 
 def parse(arg):
@@ -85,7 +87,7 @@ class HBNBCommand(cmd.Cmd):
         elif argline[0] not in HBNBCommand.__classes:
             print("** class doesn't exist **")
         else:
-            print(eval(argl[0])().id)
+            print(eval(argline[0])().id)
             storage.save()
 
     def do_show(self, arg):
@@ -117,9 +119,9 @@ class HBNBCommand(cmd.Cmd):
             del ser_objs["{}.{}".format(argline[0], argline[1])]
             storage.save()
 
-    def do_all(self, line):
+    def do_all(self, arg):
         argline = parse(arg)
-        if len(argl) > 0 and argl[0] not in HBNBCommand.__classes:
+        if len(argline) > 0 and argline[0] not in HBNBCommand.__classes:
             print("** class doesn't exist **")
         else:
             obl = []
@@ -128,7 +130,7 @@ class HBNBCommand(cmd.Cmd):
                     obl.append(ob.__str__())
                 elif len(argline) == 0:
                     obl.append(ob.__str__())
-                    print(obl)
+            print(obl)
 
     def do_count(self, arg):
         argline = parse(arg)

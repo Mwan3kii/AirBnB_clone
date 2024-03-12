@@ -5,7 +5,7 @@ The BaseModel that defines the attributes to use.
 
 from datetime import datetime
 import uuid
-from models import storage
+from models
 
 
 class BaseModel:
@@ -17,22 +17,23 @@ class BaseModel:
             *args: Non keyworded arguments
             **kwargs: Keyworded arguments
         """
-        if kwargs:
+        thedate = "%Y-%m-%dT%H:%M:%S.%f"
+        self.id = str(uuid.uuid4())
+        self.created_at = datetime.today()
+        self.updated_at = datetime.today()
+        if len(kwargs) != 0:
             for key, value in kwargs.items():
                 if key == 'created_at' or key == 'updated_at':
-                    value = datetime.strptime(value, '%Y-%m-%dT%H:%M:%S.%f')
-                elif key != '__class__':
-                    setattr(self, key, value)
-        else:
-            self.id = str(uuid.uuid4())
-            self.created_at = datetime.now()
-            self.updated_at = datetime.now()
-            storage.new(self)
+                    self.__dict__[key] = datetime.strptime(value, thedate)
+                else:
+                    self.__dict__[key] = value
+                else:
+                    models.storage.new(self)
 
     def save(self):
         """Updates the updated_at attribute with current time."""
-        self.updated_at = datetime.now()
-        storage.save()
+        self.updated_at = datetime.today()
+        models.storage.save()
 
     def to_dict(self):
         """Returns dictionary containing all keys/values of dict

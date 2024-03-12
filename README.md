@@ -5,9 +5,11 @@ The Airbnb Console project is a command-line interface(CLI) designed to manage a
 
 ## Command Interpreter
 
-The command interpreter is a Python based CLI that allows users to interact with the Airbnb console. It provides commands for Airbnb listings, bookings and reservations from their terminal.
+The command interpreter is a Python based CLI that accepts a number of commands that are solely defines for the purpose of the usage of the AirBnB website
 
-Some commands that are aavailable are:
+This command line interpreter serves as the frontend of the web app where users can interact with the backend which was developed with python OOP programming
+
+Some commands that are available are:
 
 - show
 - create
@@ -20,21 +22,21 @@ Some commands that are aavailable are:
 
 To start the Airbnb console:
 
-Clone the repository in your local machine
+1. Clone the repository in your local machine
 
 ## How to use it
   
 1. Run the console
 
-``
+```
 /AirBnB_clone$ ./console.py
-``
+```
 
 2. This prompt should appear:
 
-``
+```
 (hbnb)
-``
+```
 
 3. Then you can implement the recognizable commands the interpreter does.
 

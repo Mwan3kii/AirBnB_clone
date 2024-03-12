@@ -57,7 +57,7 @@ It should work in both interactive and interactive mode
 
 The **interactive mode**:
 
-``
+```
 $ ./console.py
 (hbnb) help
 
@@ -69,11 +69,11 @@ EOF  help  quit
 (hbnb) 
 (hbnb) quit
 $
-``
+```
 
 The **non-interactive** mode
 
-``
+```
 $ echo "help" | ./console.py
 (hbnb)
 
@@ -93,7 +93,7 @@ Documented commands (type help <topic>):
 EOF  help  quit
 (hbnb) 
 $
-``
+```
 
 ## AUTHOR
 

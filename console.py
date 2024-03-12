@@ -10,6 +10,7 @@ from models.amenity import Amenity
 from models.review import Review
 from models.user import User
 
+
 def parse(arg):
     curly_braces = re.search(r"\{(.*?)\}", arg)
     brackets = re.search(r"\[(.*?)\]", arg)
@@ -27,16 +28,17 @@ def parse(arg):
         retl.append(curly_braces.group())
         return retl
 
+
 class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb) "
     __classes = {
-            "BaseModel",
-             "User",
-             "State",
-             "City",
-             "Amenity",
-             "Place",
-             "Review"
+        "BaseModel",
+        "User",
+        "State",
+        "City",
+        "Amenity",
+        "Place",
+        "Review"
     }
 
     def do_quit(self, arg):
@@ -127,6 +129,7 @@ class HBNBCommand(cmd.Cmd):
                 elif len(argline) == 0:
                     obl.append(ob.__str__())
                     print(obl)
+
     def do_count(self, arg):
         argline = parse(arg)
         count = 0
@@ -169,7 +172,7 @@ class HBNBCommand(cmd.Cmd):
         elif type(eval(argline[2])) == dict:
             ob = ser_objs["{}.{}".format(argline[0], argline[1])]
             for key, value in eval(argline[2]).items():
-                if (key in ob.__class__.__dict__.keys() and 
+                if (key in ob.__class__.__dict__.keys() and
                         type(ob.__class__.__dict__[key]) in {str, int, float}):
                     valtype = type(ob.__class__.__dict__[key])
                     ob.__dict__[key] = valtype(value)

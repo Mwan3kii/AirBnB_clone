@@ -10,6 +10,7 @@ from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
 
+
 class FileStorage:
     __file_path = "file.json"
     __objects = {}
@@ -34,6 +35,6 @@ class FileStorage:
                 for ob in ser_objs.values():
                     class_name = ob["__class__"]
                     del ob["__class__"]
-                    self.new(eval(class_name) (**ob))
+                    self.new(eval(class_name)(**ob))
         except FileNotFoundError:
             return

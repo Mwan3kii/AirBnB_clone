@@ -1,0 +1,12 @@
+.places {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 30px;
+	justify-content: space-between;
+}
+.places article {
+	width: calc(33.33% - 20px);
+	margin-bottom: 20px;
+	border: 1px solid #DDDDDD;
+	border-radius: 4px;
+}

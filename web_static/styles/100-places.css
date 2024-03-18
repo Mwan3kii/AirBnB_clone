@@ -1,0 +1,38 @@
+.places {
+	margin-top: 30px;
+}
+.places h1 {
+	font-size: 30px;
+}
+.places article {
+	padding: 20px;
+	border: 1px solid #DDDDDD;
+	margin-bottom: 20px;
+	border-radius: 4px;
+}
+.places article h2 {
+	font-size: 20px;
+}
+.amenities, .reviews {
+	margin-top: 40px;
+}
+.amenities h2, .reviews h2 {
+	font-size: 16px;
+	border-bottom: 1px solid #DDDDDD;
+}
+.amenities li, .reviews li {
+	margin-bottom: 10px;
+}
+.amenities ul, .reviews ul {
+	list-style-type: none;
+}
+.amenities li span {
+	margin-left: 20px;
+	font-size: 14px;
+}
+.reviews h3 {
+	font-size: 14px;
+}
+.reviews p {
+	font-size: 12px;
+}

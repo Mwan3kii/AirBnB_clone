@@ -2,11 +2,4 @@ header {
 	background-color: #FF0000;
 	height: 70px;
 	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-header h1 {
-	color: white;
-	margin: 0;
 }

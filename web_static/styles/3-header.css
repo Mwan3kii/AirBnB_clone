@@ -12,4 +12,5 @@ header {
 	margin-left: 20px;
 	background-image: url("../images/logo.png");
 	background-position: center;
+	background-repeat: no-repeat;
 }

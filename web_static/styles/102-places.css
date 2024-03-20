@@ -82,13 +82,13 @@
 	margin-right: 10px;
 }
 .amenities li span.Pet-Friendly {
-	background-image: url('images/pet.png');
+	background-image: url("../images/icon_pets.png");
 }
 .amenities li span.TV {
-	background-image: url('images/tv.png');
+	background-image: url("../images/icon_tv.png");
 }
 .amenities li span.WiFi {
-	background-image: url('images/wifi.png');
+	background-image: url("../images/icon_wifi.png");
 }
 .reviews h3 {
 	font-size: 14px;
